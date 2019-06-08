@@ -1,7 +1,7 @@
 #ifndef NETGEN_CORE_NGCORE_API_HPP
 #define NETGEN_CORE_NGCORE_API_HPP
 
-#ifdef WIN32
+#ifdef _WIN32
         #define NGCORE_API_EXPORT __declspec(dllexport)
         #define NGCORE_API_IMPORT __declspec(dllimport)
 #else
@@ -16,7 +16,7 @@
 #endif
 
 #ifdef __INTEL_COMPILER
-  #ifdef WIN32
+  #ifdef _WIN32
     #define NETGEN_INLINE __forceinline inline
     #define NETGEN_LAMBDA_INLINE
   #else
