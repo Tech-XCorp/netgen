@@ -1,7 +1,7 @@
 #ifndef NETGEN_CORE_NGCORE_API_HPP
 #define NETGEN_CORE_NGCORE_API_HPP
 
-#ifdef WIN32
+#ifdef _WIN32
 
 // This function or variable may be unsafe. Consider using _ftime64_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 #pragma warning(disable:4244)
@@ -31,10 +31,10 @@
 // '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
 #pragma warning(disable:4910)
 
-#endif // WIN32
+#endif // _WIN32
 
 
-#ifdef WIN32
+#ifdef _WIN32
         #define NGCORE_API_EXPORT __declspec(dllexport)
         #define NGCORE_API_IMPORT __declspec(dllimport)
 #else
@@ -49,7 +49,7 @@
 #endif
 
 #ifdef __INTEL_COMPILER
-  #ifdef WIN32
+  #ifdef _WIN32
     #define NETGEN_INLINE __forceinline inline
     #define NETGEN_LAMBDA_INLINE
   #else

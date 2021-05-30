@@ -2,7 +2,7 @@
 #include "archive.hpp"
 #include "version.hpp"
 
-#ifndef WIN32
+#ifndef _WIN32
 #include <cxxabi.h>
 #endif
 

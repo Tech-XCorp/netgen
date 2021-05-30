@@ -1,7 +1,7 @@
 #include "utils.hpp"
 #include "logging.hpp"
 
-#ifndef WIN32
+#ifndef _WIN32
 #include <cxxabi.h>
 #endif
 #include <iostream>
@@ -11,7 +11,7 @@ namespace ngcore
   // parallel netgen
   int id = 0, ntasks = 1;
 
-#ifdef WIN32
+#ifdef _WIN32
   // windows does demangling in typeid(T).name()
   NGCORE_API std::string Demangle(const char* typeinfo) {
       std::string name = typeinfo;
