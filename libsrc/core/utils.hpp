@@ -15,7 +15,7 @@
 #endif
 
 #ifdef NETGEN_ARCH_AMD64
-#ifdef WIN32
+#ifdef _WIN32
 #include <intrin.h>   // for __rdtsc()  CPU time step counter
 #else
 #include <x86intrin.h>   // for __rdtsc()  CPU time step counter

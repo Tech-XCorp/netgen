@@ -6,7 +6,7 @@
 
 #include "flags.hpp"
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <float.h>
 #endif
 
@@ -539,7 +539,7 @@ namespace ngcore
           endptr = const_cast<char *>(pos);          
 
         /*
-#ifdef WIN32
+#ifdef _WIN32
 	if(endptr != pos && !_finite(val))
 	  endptr = const_cast<char *>(pos);
 #else
